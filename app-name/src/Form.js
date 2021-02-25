@@ -26,7 +26,7 @@ export default function Form(props) {
                             onChange={onChange}
                             name='name'
                             type='text'
-                        />
+                        /><br /><br />
                     </label>
                     </div>
                     <div>
@@ -36,7 +36,7 @@ export default function Form(props) {
                             onChange={onChange}
                             name='email'
                             type='text'
-                        />
+                        /><br /><br />
                     </label>
                     </div>
                     <div>
@@ -45,18 +45,28 @@ export default function Form(props) {
                             value={values.password}
                             onChange={onChange}
                             name='password'
-                            type='text'
+                            type='password'
                         />
                     </label>
                     </div>
                     <div>
-                    <label>Accept Terms of Service&nbsp;
+                    <label>Confirm Password&nbsp;
+                        <input 
+                            value={values.confirm}
+                            onChange={onChange}
+                            name='confirm'
+                            type='password'
+                        /><br />{`(Confirm Password must exactly match Password, or Submit button will not activate)`}<br /><br />
+                    </label>
+                    </div>
+                    <div>
+                    <label>{`Accept Terms of Service (required for Submit button to activate)`}
                         <input 
                             checked={values.terms}
                             onChange={onChange}
                             name='terms'
                             type='checkbox'
-                        />
+                        /><br /><br />
                     </label>
                     </div>
                     <button disabled={disabled}>Submit</button>
@@ -64,6 +74,7 @@ export default function Form(props) {
                         <div>{errors.name}</div>
                         <div>{errors.email}</div>
                         <div>{errors.password}</div>
+                        <div>{errors.confirm}</div>
                         <div>{errors.terms}</div>
                     </div>
 

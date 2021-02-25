@@ -6,8 +6,8 @@ import Form from './Form'
 import formSchema from './Schema'
 import * as yup from 'yup'
 
-const initialFormValues = {name: '', email: '', password: '', terms: false,}
-const initialFormErrors = {name: '', email: '', password: '', terms: false,}
+const initialFormValues = {name: '', email: '', password: '', confirm: '', terms: false,}
+const initialFormErrors = {name: '', email: '', password: '', confirm: '', terms: false,}
 const initialUsers = []
 const initialDisabled =  true;
 
@@ -60,7 +60,7 @@ function App() {
         submit={postNewUser}
       />
 
-      <h2>Current Users</h2>
+      <h2><br />Current Users</h2>
 
       {
         users.map(user => {
