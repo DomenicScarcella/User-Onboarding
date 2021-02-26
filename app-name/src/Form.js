@@ -19,6 +19,7 @@ export default function Form(props) {
                 <h2>Add a User</h2>
 
                 <div className='form-inputs'>
+
                     <div>
                     <label>Name&nbsp;
                         <input 
@@ -29,6 +30,7 @@ export default function Form(props) {
                         /><br /><br />
                     </label>
                     </div>
+
                     <div>
                     <label>Email&nbsp;
                         <input 
@@ -39,6 +41,7 @@ export default function Form(props) {
                         /><br /><br />
                     </label>
                     </div>
+
                     <div>
                     <label>Password&nbsp;
                         <input 
@@ -49,6 +52,7 @@ export default function Form(props) {
                         />
                     </label>
                     </div>
+
                     <div>
                     <label>Confirm Password&nbsp;
                         <input 
@@ -59,6 +63,7 @@ export default function Form(props) {
                         /><br />{`(Confirm Password must exactly match Password, or Submit button will not activate)`}<br /><br />
                     </label>
                     </div>
+
                     <div>
                     <label>{`Accept Terms of Service (required for Submit button to activate)`}
                         <input 
@@ -69,7 +74,8 @@ export default function Form(props) {
                         /><br /><br />
                     </label>
                     </div>
-                    <button disabled={disabled}>Submit</button>
+
+                    <button id='submitButton' disabled={disabled}>Submit</button>
                     <div className='errors'>
                         <div>{errors.name}</div>
                         <div>{errors.email}</div>
@@ -77,11 +83,8 @@ export default function Form(props) {
                         <div>{errors.confirm}</div>
                         <div>{errors.terms}</div>
                     </div>
-
                 </div>
-
             </div>
         </form>
     )
-    
 }
